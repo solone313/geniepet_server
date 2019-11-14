@@ -1,0 +1,132 @@
+[33mcommit 413f02450e1fe21fbcef9ced2ca057f84bb76692[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Nov 14 14:47:02 2019 +0900
+
+    recommender system
+
+[33mcommit e8aac5f66f3f353470db9b7e8196359c73a8860f[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Nov 14 14:42:58 2019 +0900
+
+    recommender
+
+[33mcommit aa0d2c81338361a0436aef524442c2cccc57d6ed[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Sun Oct 27 18:23:19 2019 +0900
+
+    middle test version.
+
+[33mcommit c76756196c632b981d03060f080ee8f9da39c982[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Sat Oct 26 22:34:55 2019 +0900
+
+    test db & cart & order
+
+[33mcommit ed49c615a4a13dfda12a81fc277fda62590602e0[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Sat Oct 26 15:50:30 2019 +0900
+
+    clean folder
+
+[33mcommit 8e9939956f024a8150163c5a54ef2bbd07235b55[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Tue Oct 15 14:08:44 2019 +0900
+
+    login-auth-jwt
+
+[33mcommit adc11dde6cc5145d84664362fcb808b457c1d7e7[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Oct 10 20:51:51 2019 +0900
+
+    complete models && db
+
+[33mcommit 9c6659be5dd0d92cc6b4ad45ee448ac3c9211ed2[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Oct 10 19:46:06 2019 +0900
+
+    change models
+
+[33mcommit 57105aa5b87d3796cb09f38c8895af26fe456a1d[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Tue Oct 8 18:28:17 2019 +0900
+
+    pagination
+
+[33mcommit 5060bff43dae3a0d7c99f859b3fc55fa967be945[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Sep 26 11:20:46 2019 +0900
+
+    connect postgresql
+
+[33mcommit b7ca5922a6154672851f2c667937b84c16625da1[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Tue Sep 24 19:46:53 2019 +0900
+
+    model rank&dog
+
+[33mcommit 4590a78ecd771117226059e536791ff021011b55[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Tue Sep 17 16:38:34 2019 +0900
+
+    change url
+
+[33mcommit af2bf12c11f4917300f4ef4655fa57714cd30e1d[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Tue Sep 17 16:29:05 2019 +0900
+
+    deep learning
+
+[33mcommit d71f51d27628006336f57831067928972be2d0fb[m
+Author: solone313 <44783473+solone313@users.noreply.github.com>
+Date:   Sat Aug 31 23:52:25 2019 +0900
+
+    Update README.md
+
+[33mcommit 89f083df5881fc90e65fb44cf3168123fcfc1a83[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Aug 29 17:56:31 2019 +0900
+
+    ordering rating
+
+[33mcommit 94a54dba357c7c24365aa1f4df17bb18b6c8008e[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Aug 29 16:40:08 2019 +0900
+
+    feed
+
+[33mcommit 7b3799ff3276b8d2698d90e9b87e3fe305465a12[m
+Author: solone313@naver.com <solone313@naver.com>
+Date:   Thu Aug 29 15:57:16 2019 +0900
+
+    server first
+
+[33mcommit f2cd9e42a2fc955c0abdbb02c0cb6c3f685df6c3[m
+Merge: d0330cf cab1301
+Author: jaehyunpark <wogus3602@naver.com>
+Date:   Thu Aug 29 03:41:23 2019 +0900
+
+    Merge branch 'master' of https://github.com/wogus3602/GeniePet_Client
+
+[33mcommit d0330cfd10b12607a386264fb9a39142fa1a01b7[m
+Author: jaehyunpark <wogus3602@naver.com>
+Date:   Thu Aug 29 03:41:05 2019 +0900
+
+    new
+
+[33mcommit cab1301e6e9ed75b60097320f013dad9cbdffa95[m
+Author: Park Jae Hyun <46857148+wogus3602@users.noreply.github.com>
+Date:   Mon Aug 26 03:20:22 2019 +0900
+
+    Create README.md
+
+[33mcommit 1701ca9baf0257bd8b86c57dbea346e0b648b936[m
+Author: jaehyunpark <wogus3602@naver.com>
+Date:   Mon Aug 26 03:19:52 2019 +0900
+
+    upload image from android to django
+
+[33mcommit 9dbb5f888309b404aa183440637a441caaac94d2[m
+Author: jaehyunpark <wogus3602@naver.com>
+Date:   Mon Aug 26 03:17:12 2019 +0900
+
+    1

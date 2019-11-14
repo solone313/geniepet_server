@@ -10,21 +10,21 @@ class Feed(models.Model):
     price = models.CharField(max_length=30)
     text = models.CharField(max_length=1000)
     image = models.URLField()
-       
     def __unicode__(self):
         return self.name
     def __str__(self):
         return self.name
-
-
+    
 class Dog(models.Model):
     #user foreignKey
     objects = models.Manager()
+    user = models.ForeignKey(User,null=True,on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     species = models.CharField(max_length=50)
     def __str__(self):
         return self.name+': '+self.species
+
  
 class Review(models.Model):
     objects = models.Manager()
@@ -37,7 +37,7 @@ class Review(models.Model):
     )
     feed = models.ForeignKey(Feed,on_delete=models.CASCADE, related_name="review")
     pub_date = models.DateTimeField('date published')
-    user_name = models.CharField(max_length=100)
+    user_dog = models.CharField(max_length=100)
     comment = models.CharField(max_length=200)
     rating = models.IntegerField(choices=RATING_CHOICES)
 
@@ -54,3 +54,7 @@ class Order(models.Model):
     cart = models.ForeignKey(Cart,on_delete=models.CASCADE, blank=True, null=True)
     items = models.ManyToManyField(Feed) 
     user = models.ForeignKey(User,null=True,on_delete=models.CASCADE, related_name="orders")
+
+class Tip(models.Model):    
+    objects = models.Manager()
+    text = models.CharField(max_length=1000, blank=True, null=True)

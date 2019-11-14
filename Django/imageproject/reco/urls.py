@@ -13,4 +13,6 @@ router.register('order', views.OrderViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('pot/upload/',views.post),
+    path('tip/',views.tip),
+    path('ranking/',views.ranking),
 	]
