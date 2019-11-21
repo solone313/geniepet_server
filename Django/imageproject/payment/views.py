@@ -31,12 +31,13 @@ def kakaoPay(request):
     response = json.loads(response.text)
     global TID
     TID = response['tid']
-    return HttpResponseRedirect(response["next_redirect_pc_url"])
+    return HttpResponseRedirect(response["next_redirect_mobile_url"])
 
 def success(request):
     global pg
     pg = request.GET['pg_token']
     info = payapporve(pg)
+    print(info)
     return Response('success.html')
 
 def payapporve(pg):
