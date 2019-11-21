@@ -68,4 +68,4 @@ def ranking(request):
     actual_data = [d['fields'] for d in post_list]
     # and now dump to JSON
     output = json.dumps(actual_data)
-    return HttpResponse(output, content_type="text/json-comment-filtered") 
+    return HttpResponse(output, content_type="text/json-comment-filtered")
