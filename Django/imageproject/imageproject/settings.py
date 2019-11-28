@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_framework',
+    'payment',
 ]
 SITE_ID = 1
 REST_USE_JWT = True

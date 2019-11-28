@@ -6,7 +6,15 @@ class FeedSerializer(serializers.ModelSerializer):
         model = Feed
         fields = ['id','name', 'price','text','image']
 
+class ShampooSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Shampoo
+        fields = ['id','name', 'price','text','image']
 
+class SnackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Snack
+        fields = ['id','name', 'price','text','image']
 
 class DogSerializer(serializers.ModelSerializer):
     class Meta:
