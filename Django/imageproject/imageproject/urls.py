@@ -14,4 +14,5 @@ urlpatterns = [
     path('auth/',include('rest_auth.urls')),
     path('auth/register/',include('rest_auth.registration.urls')),
     path('', include('reco.urls')),
+    path('', include('payment.urls')),
 	]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

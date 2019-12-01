@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.http import HttpResponse, JsonResponse, HttpRequest, HttpResponseRedirect, request
-from .models import payInfo
 import requests
 import json
 from django.core import serializers

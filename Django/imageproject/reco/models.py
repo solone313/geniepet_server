@@ -14,6 +14,28 @@ class Feed(models.Model):
         return self.name
     def __str__(self):
         return self.name
+
+class Shampoo(models.Model):
+    objects = models.Manager()
+    name = models.CharField(max_length=100)
+    price = models.CharField(max_length=30)
+    text = models.CharField(max_length=1000)
+    image = models.URLField()
+    def __unicode__(self):
+        return self.name
+    def __str__(self):
+        return self.name
+
+class Snack(models.Model):
+    objects = models.Manager()
+    name = models.CharField(max_length=100)
+    price = models.CharField(max_length=30)
+    text = models.CharField(max_length=1000)
+    image = models.URLField()
+    def __unicode__(self):
+        return self.name
+    def __str__(self):
+        return self.name
     
 class Dog(models.Model):
     #user foreignKey
