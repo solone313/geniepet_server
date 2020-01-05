@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Feed,Dog,Cart,Order,Tip,Review,Shampoo,Snack
-from .serializers import FeedSerializer,DogSerializer,ReviewSerializer,CartSerializer,OrderSerializer,ShampooSerializer,SnackSerializer
+from .models import Feed,Dog,Cart,Order,Tip,Review
+from .serializers import FeedSerializer,DogSerializer,ReviewSerializer,CartSerializer,OrderSerializer
 from rest_framework import viewsets
 from rest_framework.response import Response
 from keras.models import load_model
@@ -22,14 +22,6 @@ class FeedViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.AllowAny,)
     queryset = Feed.objects.all()
     serializer_class = FeedSerializer
-class ShampooViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.AllowAny,)
-    queryset = Shampoo.objects.all()
-    serializer_class = ShampooSerializer
-class SnackViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.AllowAny,)
-    queryset = Snack.objects.all()
-    serializer_class = SnackSerializer
 class DogViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticated,)
     queryset = Dog.objects.all()
@@ -41,10 +33,12 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
 
 class CartViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.IsAuthenticated,)
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
 
 class OrderViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.IsAuthenticated,)
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
@@ -80,14 +74,6 @@ def feed(request):
     queryset = Feed.objects.all()
     return HttpResponse(queryset)
 
-def shampoo(request):
-    queryset = Shampoo.objects.all()
-    return HttpResponse(queryset)
-
-def snack(request):
-    queryset = Snack.objects.all()
-    return HttpResponse(queryset)
-
 @csrf_exempt
 def ranking(request):
     print(request.POST)
@@ -99,41 +85,6 @@ def ranking(request):
     result = ranking_list | random_object
     for i in result:
         print(i,i.score)
-    post_list = serializers.serialize('python',result,fields=('id','name','price','text','image'))
-    actual_data = [d['fields'] for d in post_list]
-    # and now dump to JSON
-    output = json.dumps(actual_data)
-    return HttpResponse(output, content_type="text/json-comment-filtered")
-
-@csrf_exempt
-def shampooranking(request):
-    print(request.POST)
-    # avg_list = Shampoo.objects.filter(review__user_dog = request.POST['user_dog']).annotate(score = Avg('review__rating'))
-    # ranking_list = avg_list.order_by('-score')
-    max_id = Shampoo.objects.order_by('-id')[0].id
-    random_id = random.randint(1, max_id+1)
-    random_object = Shampoo.objects.filter(id__gte=random_id)
-    result = random_object
-    # for i in result:
-    #     print(i,i.score)
-    post_list = serializers.serialize('python',result,fields=('id','name','price','text','image'))
-    actual_data = [d['fields'] for d in post_list]
-    # and now dump to JSON
-    output = json.dumps(actual_data)
-    return HttpResponse(output, content_type="text/json-comment-filtered")
-
-
-@csrf_exempt
-def snackranking(request):
-    print(request.POST)
-    # avg_list = Snack.objects.filter(review__user_dog = request.POST['user_dog']).annotate(score = Avg('review__rating'))
-    # ranking_list = avg_list.order_by('-score')
-    max_id = Snack.objects.order_by('-id')[0].id
-    random_id = random.randint(1, max_id+1)
-    random_object = Snack.objects.filter(id__gte=random_id)
-    result =  random_object
-    # for i in result:
-    #     print(i,i.score)
     post_list = serializers.serialize('python',result,fields=('id','name','price','text','image'))
     actual_data = [d['fields'] for d in post_list]
     # and now dump to JSON
