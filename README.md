@@ -10,3 +10,4 @@
 2. pip install -r requirements.txt
 3. python manage.py runserver
 
+runtime 환경은 python 3.6 입니다.
